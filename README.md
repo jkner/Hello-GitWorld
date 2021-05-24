@@ -23,7 +23,15 @@ Some terms:
     * fetch branch update from upstream: `$ git fetch upstream`  
     * create the branch locally and start tracking: `$ git checkout branch-to-focus`  
     * push the new local branch to your repo (origin): `$ git push origin`  
-    * (optional) remove tracking on upstream: `$ git remote rm upstream`  
+    * (optional) remove tracking on upstream: `$ git remote rm upstream` 
+The -u switch sets up tracking to the specified remote (in this example, origin)
+
+* Fetch a new branch from upstream to origin
+    * Create and switch to a local version of the new upstream branch (newbranch):
+        `$ git checkout -b newbranch upstream/newbranch`
+    * When you're ready to push the new branch to origin:
+        `$ git push -u origin newbranch`
+
 ## Handle branches on local machine (via terminal)
 * Prune the branches already deleted: `$ git fetch -p`  
 * Delete the local merged branch: `$ git branch -d name_of_branch`  
